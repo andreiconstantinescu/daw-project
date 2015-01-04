@@ -12,6 +12,9 @@
     <script src="Scripts/jquery-1.9.1.js"></script>
     <script src="Scripts/bootstrap.js"></script>
         <div class="container">
+            <h1 class="text-center">
+                Registration
+            </h1>
         <div class="row">
             <div class="col-sm-3 col-sm-offset-3">
                 <span>username</span>
