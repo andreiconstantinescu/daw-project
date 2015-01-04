@@ -34,6 +34,7 @@
         <div class="row">
             <div class="col-sm-3 col-sm-offset-3">
                 <asp:Button ID="Button1" runat="server" Text="Log in" OnClick="Button1_Click" />
+                <asp:HyperLink ID="hlnk_register" runat="server" NavigateUrl="~/Registration.aspx">Register</asp:HyperLink>
         </div>
     </div>
         

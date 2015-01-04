@@ -30,8 +30,8 @@ public partial class Login : System.Web.UI.Page
 
             if (password == txtb_login_password.Text)
             {
-                Session["New"] = txtb_login_username.Text;
-                Response.Write("Password is correct.");
+                Session["LoginUser"] = txtb_login_username.Text;
+                Response.Redirect("User.aspx");
             }
             else
             {
