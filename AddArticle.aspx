@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="NoNews | Add Article" Language="C#" AutoEventWireup="true" CodeFile="AddArticle.aspx.cs" Inherits="AddArticle" MasterPageFile="~/MasterPage.master"%>
 
-<asp:content id="RegisterContent" contentplaceholderid="ContentPlaceHolder1" runat="server"> 
+<asp:content id="AddArticleContent" contentplaceholderid="ContentPlaceHolder1" runat="server"> 
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3 content">
             <h3>Article Title</h3>

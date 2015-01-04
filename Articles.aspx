@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="NoNews | Articles" Language="C#" AutoEventWireup="true" CodeFile="Articles.aspx.cs" Inherits="AddArticle" MasterPageFile="~/MasterPage.master"%>
 
-<asp:content id="RegisterContent" contentplaceholderid="ContentPlaceHolder1" runat="server">
+<asp:content id="ArticlesContent" contentplaceholderid="ContentPlaceHolder1" runat="server">
     <div>
 
         <asp:SqlDataSource ID="ArticlesSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:RegistrationConnectionString %>" DeleteCommand="DELETE FROM [articles] WHERE [Id] = @Id" InsertCommand="INSERT INTO [articles] ([Id], [title], [content], [thumbnail]) VALUES (@Id, @title, @content, @thumbnail)" SelectCommand="SELECT * FROM [articles]" UpdateCommand="UPDATE [articles] SET [title] = @title, [content] = @content, [thumbnail] = @thumbnail WHERE [Id] = @Id">
