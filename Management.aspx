@@ -1,13 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Management.aspx.cs" Inherits="Management" %>
+﻿<%@ Page Title="NoNews | Manage users" Language="C#" AutoEventWireup="true" CodeFile="Management.aspx.cs" Inherits="Management" MasterPageFile="~/MasterPage.master"%>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+<asp:content id="ManagementContent" contentplaceholderid="ContentPlaceHolder1" runat="server">
     <div>
     
         <asp:SqlDataSource ID="SqlDataSourceRegistration" runat="server" ConnectionString="<%$ ConnectionStrings:RegistrationConnectionString %>" SelectCommand="SELECT * FROM [userData]"></asp:SqlDataSource>
@@ -32,6 +25,4 @@
             <SortedDescendingCellStyle BackColor="#D8D8F0" />
             <SortedDescendingHeaderStyle BackColor="#3E3277" />
         </asp:GridView>
-    </form>
-</body>
-</html>
+</asp:content>
