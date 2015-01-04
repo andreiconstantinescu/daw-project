@@ -7,4 +7,5 @@
         </h1>
     </div>
     <asp:Button ID="btn_logout" runat="server" Text="Log out" OnClick="btn_logout_Click" />
+    <asp:Button ID="btn_manage" runat="server" OnClick="btn_manage_Click" Text="Manage" Visible="False" PostBackUrl="~/Management.aspx" />
 </asp:content>

@@ -24,13 +24,19 @@ public partial class Login : System.Web.UI.Page
         if (temp == 1)
         {
             usrData.Open();
+            
             string passQuery = "select password from userData where username='" + txtb_login_username.Text + "'";
             SqlCommand passCommand = new SqlCommand(passQuery, usrData);
             string password = passCommand.ExecuteScalar().ToString().Replace(" ", "");
 
+            string getRole = "select role from userData where username='" + txtb_login_username.Text + "'";
+            SqlCommand getRoleCommand = new SqlCommand(getRole, usrData);
+            string role = getRoleCommand.ExecuteScalar().ToString().Replace(" ", "");
+
             if (password == txtb_login_password.Text)
             {
                 Session["LoginUser"] = txtb_login_username.Text;
+                Session["UserRole"] = role;
                 Response.Redirect("User.aspx");
             }
             else

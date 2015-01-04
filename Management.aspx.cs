@@ -9,6 +9,9 @@ public partial class Management : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if ((string) Session["UserRole"] != "admin")
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

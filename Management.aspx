@@ -14,6 +14,7 @@
                 <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
                 <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
                 <asp:BoundField DataField="role" HeaderText="role" SortExpression="role" />
+                <asp:ButtonField CommandName="Cancel" HeaderText="Delete" ShowHeader="True" Text="Do it" />
             </Columns>
             <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
             <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />

@@ -9,18 +9,30 @@ public partial class User : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+
         if (Session["LoginUser"] != null)
         {
             lbl_welcome.Text += Session["LoginUser"].ToString() + "!";
+
+            if (Session["UserRole"].ToString() == "admin")
+            {
+                btn_manage.Visible = true;
+            }
         }
         else
         {
             Response.Redirect("Login.aspx");
         }
+
+        
     }
     protected void btn_logout_Click(object sender, EventArgs e)
     {
         Session["LoginUser"] = null;
         Response.Redirect("Login.aspx");
+    }
+    protected void btn_manage_Click(object sender, EventArgs e)
+    {
+
     }
 }
