@@ -29,11 +29,13 @@ public partial class Registration : System.Web.UI.Page
     {
         try
         {
+            Guid userGUID = Guid.NewGuid();
             SqlConnection usrData = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
             usrData.Open();
-            string insertQuery = "insert into userData (username, email, password, role) values (@username, @email, @password, @role)";
+            string insertQuery = "insert into userData (Id, username, email, password, role) values (@id, @username, @email, @password, @role)";
             SqlCommand command = new SqlCommand(insertQuery, usrData);
 
+            command.Parameters.AddWithValue("@id", userGUID.ToString());
             command.Parameters.AddWithValue("@username", txtb_username.Text);
             command.Parameters.AddWithValue("@email", txtb_email.Text);
             command.Parameters.AddWithValue("@password", txtb_pass.Text);
