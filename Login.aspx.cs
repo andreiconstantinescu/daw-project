@@ -37,7 +37,14 @@ public partial class Login : System.Web.UI.Page
             {
                 Session["LoginUser"] = txtb_login_username.Text;
                 Session["UserRole"] = role;
-                Response.Redirect("User.aspx");
+                if (Session["UserRole"].ToString() == "editor")
+                {
+                    Response.Redirect("AddArticle.aspx");
+                }
+                else
+                {
+                    Response.Redirect("User.aspx");
+                }
             }
             else
             {
