@@ -12,4 +12,4 @@ The purpose of this app is to develop coding skills in the [ASP.NET](http://asp.
 This app lacks of styling and has a major issue: all the comments are shown on every post. Bug that I'm not gonna fix.
 
 #License
-No License. Do whatever you want with this.
+[Beerware](http://en.wikipedia.org/wiki/Beerware).
