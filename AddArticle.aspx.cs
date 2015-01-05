@@ -23,7 +23,7 @@ public partial class AddArticle : System.Web.UI.Page
             Guid articleGUID = Guid.NewGuid();
             SqlConnection usrData = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
             usrData.Open();
-            string insertQuery = "insert into articles (Id, title, content, thumbnail, cateogory) values (@id, @title, @content, @thumbnail, @category)";
+            string insertQuery = "insert into articles (Id, title, content, thumbnail, category) values (@id, @title, @content, @thumbnail, @category)";
             SqlCommand command = new SqlCommand(insertQuery, usrData);
 
             command.Parameters.AddWithValue("@id", articleGUID.ToString());
@@ -34,7 +34,7 @@ public partial class AddArticle : System.Web.UI.Page
 
             command.ExecuteNonQuery();
 
-            Response.Write("Registration is successful!");
+            Response.Redirect("Articles.aspx");
 
             usrData.Close();
         }

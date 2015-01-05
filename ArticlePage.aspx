@@ -4,12 +4,19 @@
     <div class="text-center">
         <h1>
             <asp:Label ID="lbl_article_title" runat="server" Text="Label"></asp:Label>
+
         </h1>
+        <h5>
+            <asp:Label ID="lbl_article_category" runat="server" Text="Label"></asp:Label>
+        </h5>
     </div>
     <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
             <asp:TextBox ID="txt_article_content" runat="server" BorderStyle="None" EnableTheming="False" EnableViewState="False" Height="208px" ReadOnly="True" TextMode="MultiLine" Width="100%"></asp:TextBox>
         </div>
+    </div>
+    <div>
+        <asp:Button ID="Button1" runat="server" Text="Profile" Visible="True" PostBackUrl="~/User.aspx" />
     </div>
 
     <div class="row" id="commentBox" runat="server">

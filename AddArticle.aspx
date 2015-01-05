@@ -29,8 +29,8 @@
         <div class="col-sm-6 col-sm-offset-3">
             <hr />
             <div class="text-center">
-                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-                <asp:Button ID="btn_profile" runat="server" Text="Manage" Visible="True" PostBackUrl="~/User.aspx" />
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Add" />
+                <asp:Button ID="btn_profile" runat="server" Text="Profile" Visible="True" PostBackUrl="~/User.aspx" />
             </div>
         </div>
     </div>

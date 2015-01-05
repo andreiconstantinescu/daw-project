@@ -13,6 +13,7 @@ public partial class _Default : System.Web.UI.Page
     {
         lbl_article_title.Text = Session["ArticleTitle"].ToString();
         txt_article_content.Text = Session["ArticleContent"].ToString();
+        lbl_article_category.Text = Session["ArticleCategory"].ToString();
 
         if ((string)Session["UserRole"] != "user")
         {

@@ -2,7 +2,7 @@
 
 <asp:content id="ArticlesContent" contentplaceholderid="ContentPlaceHolder1" runat="server">
     <div>
-        <asp:Button ID="btn_profile" runat="server" Text="Manage" Visible="True" PostBackUrl="~/User.aspx" />
+        <asp:Button ID="btn_profile" runat="server" Text="Profile" Visible="True" PostBackUrl="~/User.aspx" />
         <asp:SqlDataSource ID="ArticlesSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:RegistrationConnectionString %>" DeleteCommand="DELETE FROM [articles] WHERE [Id] = @Id" InsertCommand="INSERT INTO [articles] ([Id], [title], [content], [thumbnail]) VALUES (@Id, @title, @content, @thumbnail)" SelectCommand="SELECT * FROM [articles]" UpdateCommand="UPDATE [articles] SET [title] = @title, [content] = @content, [thumbnail] = @thumbnail WHERE [Id] = @Id">
             <DeleteParameters>
                 <asp:Parameter Name="Id" Type="String" />
