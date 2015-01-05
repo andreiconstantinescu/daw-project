@@ -33,9 +33,12 @@
                     </asp:ContentPlaceHolder>
                 </div>
             </div>
-            <div class="footer">
-                <span>Footer</span>
-            </div>
+        <div class="footer" style="margin-top: 24px">
+            <pre> 
+                No-CSS Certified.
+                Copyright Andrei Constantinescu, 2015
+            </pre>
+        </div>
         </div>
         
     </form>

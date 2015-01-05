@@ -2,7 +2,12 @@
 
 <asp:content ID="ArticleContent"   contentplaceholderid="ContentPlaceHolder1" runat="server">
     <div>
-
+        <pre>
+            Welcome!
+            `NoNews` is the ultimate tool for keeping and spreading short articles across the world. It was prodly coded in ASP.Net in ~30 hours (check the log <a href="https://github.com/andreiconstantinescu/daw-project">here</a>) without knowing anything about this "marvellous" framework.
+            
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login.aspx" >Login</asp:HyperLink>
+        </pre>
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="IndexArticlesSqlDataSource" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="100%">
             <Columns>
                 <asp:CommandField ShowSelectButton="True" />

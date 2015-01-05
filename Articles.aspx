@@ -20,19 +20,17 @@
                 <asp:Parameter Name="Id" Type="String" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="ArticlesSqlDataSource" Width="100%">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="title" DataSourceID="ArticlesSqlDataSource" Width="100%">
             <Columns>
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
-                <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
+                <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id" />
+                <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" ReadOnly="True" />
                 <asp:BoundField DataField="content" HeaderText="content" SortExpression="content" />
                 <asp:BoundField DataField="thumbnail" HeaderText="thumbnail" SortExpression="thumbnail" />
+                <asp:BoundField DataField="category" HeaderText="category" SortExpression="category" />
             </Columns>
         </asp:GridView>
 
     </div>
-
-<asp:EntityDataSource ID="EntityDataSource1" runat="server">
-</asp:EntityDataSource>
 
 </asp:content>

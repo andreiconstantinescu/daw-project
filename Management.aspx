@@ -2,7 +2,7 @@
 
 <asp:content id="ManagementContent" contentplaceholderid="ContentPlaceHolder1" runat="server">
     <div>
-    <asp:Button ID="btn_profile" runat="server" Text="Manage" Visible="False" PostBackUrl="~/User.aspx" />
+        <asp:Button ID="btn_profile" runat="server" Text="Manage" Visible="True" PostBackUrl="~/User.aspx" />
         <asp:SqlDataSource ID="SqlDataSourceRegistration" runat="server" ConnectionString="<%$ ConnectionStrings:RegistrationConnectionString %>" SelectCommand="SELECT * FROM [userData]" DeleteCommand="DELETE FROM [userData] WHERE [Id] = @Id" InsertCommand="INSERT INTO [userData] ([Id], [username], [email], [password], [role]) VALUES (@Id, @username, @email, @password, @role)" UpdateCommand="UPDATE [userData] SET [username] = @username, [email] = @email, [password] = @password, [role] = @role WHERE [Id] = @Id">
             <DeleteParameters>
                 <asp:Parameter Name="Id" Type="String" />
@@ -13,7 +13,7 @@
                 <asp:Parameter Name="email" Type="String" />
                 <asp:Parameter Name="password" Type="String" />
                 <asp:Parameter Name="role" Type="String" />
-            </InsertParameters>
+            </InsertParameters>                                                                                                                                                                                                                                             
             <UpdateParameters>
                 <asp:Parameter Name="username" Type="String" />
                 <asp:Parameter Name="email" Type="String" />
