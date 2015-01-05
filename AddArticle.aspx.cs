@@ -23,13 +23,14 @@ public partial class AddArticle : System.Web.UI.Page
             Guid articleGUID = Guid.NewGuid();
             SqlConnection usrData = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
             usrData.Open();
-            string insertQuery = "insert into articles (Id, title, content, thumbnail) values (@id, @title, @content, @thumbnail)";
+            string insertQuery = "insert into articles (Id, title, content, thumbnail, cateogory) values (@id, @title, @content, @thumbnail, @category)";
             SqlCommand command = new SqlCommand(insertQuery, usrData);
 
             command.Parameters.AddWithValue("@id", articleGUID.ToString());
             command.Parameters.AddWithValue("@title", txt_articleTitle.Text);
             command.Parameters.AddWithValue("@content", txt_articleContent.Text);
             command.Parameters.AddWithValue("@thumbnail", txt_thumbnailPath.Text);
+            command.Parameters.AddWithValue("@category", txt_category.Text);
 
             command.ExecuteNonQuery();
 
