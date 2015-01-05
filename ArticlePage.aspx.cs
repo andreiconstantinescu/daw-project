@@ -15,6 +15,8 @@ public partial class _Default : System.Web.UI.Page
         txt_article_content.Text = Session["ArticleContent"].ToString();
         lbl_article_category.Text = Session["ArticleCategory"].ToString();
 
+        Image1.ImageUrl = Session["ArticleImage"].ToString();
+
         if ((string)Session["UserRole"] != "user")
         {
             commentBox.Attributes.Add("class", "hidden");

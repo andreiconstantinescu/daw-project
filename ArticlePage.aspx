@@ -2,10 +2,10 @@
 
 <asp:content ID="ArticleContent"   contentplaceholderid="ContentPlaceHolder1" runat="server">
     <div class="text-center">
-        <h1>
+        <asp:Image ID="Image1" runat="server" Height="100px" Width="100px" />
+        <h4>
             <asp:Label ID="lbl_article_title" runat="server" Text="Label"></asp:Label>
-
-        </h1>
+        </h4>  
         <h5>
             <asp:Label ID="lbl_article_category" runat="server" Text="Label"></asp:Label>
         </h5>

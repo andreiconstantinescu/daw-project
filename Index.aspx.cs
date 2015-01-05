@@ -18,6 +18,8 @@ public partial class _Default : System.Web.UI.Page
         Session["ArticleTitle"] = row.Cells[1].Text;
         Session["ArticleContent"] = row.Cells[2].Text;
         Session["ArticleCategory"] = row.Cells[3].Text;
+        Session["ArticleImage"] = row.Cells[4].Text;
+
         Response.Redirect("ArticlePage.aspx");
     }
 }
