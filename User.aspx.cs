@@ -17,6 +17,17 @@ public partial class User : System.Web.UI.Page
             if (Session["UserRole"].ToString() == "admin")
             {
                 btn_manage.Visible = true;
+                btn_manageArticles.Visible = false;
+                btn_addArticle.Visible = false;
+            }
+            else
+            {
+                if (Session["UserRole"].ToString() == "editor")
+                {
+                    btn_manage.Visible = false;
+                    btn_manageArticles.Visible = true;
+                    btn_addArticle.Visible = true;
+                }
             }
         }
         else
@@ -30,9 +41,5 @@ public partial class User : System.Web.UI.Page
     {
         Session["LoginUser"] = null;
         Response.Redirect("Login.aspx");
-    }
-    protected void btn_manage_Click(object sender, EventArgs e)
-    {
-
     }
 }
