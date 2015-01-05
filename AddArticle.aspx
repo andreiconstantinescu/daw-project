@@ -17,4 +17,5 @@
             <asp:TextBox ID="txt_thumbnailPath" runat="server" Width="100%"></asp:TextBox>
         </div>
     </div>
+    <asp:Button ID="btn_profile" runat="server" Text="Manage" Visible="True" PostBackUrl="~/User.aspx" />
 </asp:content>
