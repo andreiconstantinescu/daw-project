@@ -1,9 +1,14 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Registration.aspx.cs" Inherits="Registration" MasterPageFile="~/MasterPage.master"%>
 
 <asp:content id="RegisterContent" contentplaceholderid="ContentPlaceHolder1" runat="server">
-    <h1 class="text-center">
-        Registration
-    </h1>
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <h1 class="text-center">
+                Register
+            </h1>
+            <hr />
+        </div>
+    </div>
     <div class="row">
         <div class="col-sm-3 col-sm-offset-3">
             <span>username</span>
@@ -57,8 +62,12 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-3 col-sm-offset-3">
-            <asp:Button ID="btn_register" runat="server" Text="Register" OnClick="btn_register_Click" />
-            <input id="btn_rst" type="reset" value="Reset" /></div>
+        <div class="col-sm-6 col-sm-offset-3">
+            <hr />
+            <div class="text-center">
+                <asp:Button ID="btn_register" runat="server" Text="Register" OnClick="btn_register_Click" />
+                <input id="btn_rst" type="reset" value="Reset" />
+            </div>
+        </div>
     </div>
 </asp:content>    
