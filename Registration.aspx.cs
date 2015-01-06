@@ -43,7 +43,7 @@ public partial class Registration : System.Web.UI.Page
 
             command.ExecuteNonQuery();
 
-            Response.Redirect("User.aspx");
+            Response.Redirect("Login.aspx");
             
             usrData.Close();
         }
